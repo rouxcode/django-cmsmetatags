@@ -96,7 +96,7 @@ class CMSMetaTags(CMSPlugin):
         return ''
 
     def get_fb_type(self):
-        return '{}'.format(self.fb_type)
+        return '{}'.format(self.fb_type or 'website')
 
     def get_fb_title(self):
         if self.fb_title:
