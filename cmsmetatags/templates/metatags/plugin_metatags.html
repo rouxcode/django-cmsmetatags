@@ -1,0 +1,10 @@
+<title>{{ object.get_meta_title }}</title>
+<meta name="description" content="{{ object.get_meta_description }}">
+<meta property="og:locale" content="{{ request.LANGUAGE_CODE }}">
+<meta property="og:url" content="{{ request.build_absolute_uri }}" />
+<meta property="og:type" content="{{ object.get_fb_type }}" />
+<meta property="og:title" content="{{ object.get_fb_title }}" />
+<meta property="og:description" content="{{ object.get_fb_description }}" />
+{% if object.get_fb_image %}<meta property="og:image" content="{{ fb_image_url }}" />
+<meta property="og:image:secure_url" content="{{ fb_image_url }}" />
+{% endif %}{% if object.fb_appid %}<meta property="og:app_id" content="{{ object.fb_app_id }}" />{% endif %}
