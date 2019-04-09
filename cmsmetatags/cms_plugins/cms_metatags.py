@@ -48,7 +48,6 @@ class CMSMetaTagsPlugin(CMSPluginBase):
             path = img.url
         elif conf.FB_IMAGE_DEFAULT_PATH:
             path = conf.FB_IMAGE_DEFAULT_PATH
-        print path
         if path:
             site = Site.objects.get_current(request=request)
             return '{}://{}{}'.format(conf.PROTOCOL, site.domain, path)
