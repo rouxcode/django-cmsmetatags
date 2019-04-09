@@ -42,6 +42,7 @@ class CMSMetaTagsPlugin(CMSPluginBase):
         return context
 
     def get_fb_image_url(self, request, obj):
+        path = None
         img = obj.get_fb_image()
         if img:
             path = img.url
