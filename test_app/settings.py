@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     'menus',
     'treebeard',
     'sekizai',
-    'djangocms_admin_style',
 
     'filer',
     'mptt',
