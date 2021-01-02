@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-from __future__ import unicode_literals
 from setuptools import setup, find_packages
 
 
@@ -27,7 +26,7 @@ CLASSIFIERS = [
 
 setup(
     name='django-cmsmetatags',
-    version='0.0.2',
+    version='0.0.3',
     author='Alaric Mägerle',
     author_email='info@rouxcode.ch',
     description=DESCRIPTION,
@@ -38,7 +37,7 @@ setup(
     platforms=['OS Independent'],
     classifiers=CLASSIFIERS,
     install_requires=[
-        'django>=1.9'
+        'django>=2.2'
     ],
     packages=find_packages(exclude=['example', 'docs']),
     include_package_data=True,
