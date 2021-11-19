@@ -26,7 +26,7 @@ CLASSIFIERS = [
 
 setup(
     name='django-cmsmetatags',
-    version='0.0.3',
+    version='0.0.4',
     author='Alaric Mägerle',
     author_email='info@rouxcode.ch',
     description=DESCRIPTION,
