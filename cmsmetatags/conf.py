@@ -23,6 +23,14 @@ CMSMETATAGS_FIELDSETS = getattr(
                 'fb_appid',
             ],
         }),
+        (_('Twitter'), {
+            'classes': ['section', 'twitter'],
+            'fields': [
+                'tw_title',
+                'tw_image',
+                'tw_description',
+            ],
+        }),
     ]
 )
 
@@ -39,6 +47,21 @@ FB_IMAGE_OPTIONS = getattr(
 FB_IMAGE_DEFAULT_PATH = getattr(
     settings,
     'CMSMETATAGS_FB_IMAGE_DEFAULT_PATH',
+    ''
+)
+
+TW_IMAGE_OPTIONS = getattr(
+    settings,
+    'CMSMETATAGS_TW_IMAGE_OPTIONS',
+    {
+        'size': (1200, 1200),
+        'crop': False,
+        'quality': 95
+    }
+)
+TW_IMAGE_DEFAULT_PATH = getattr(
+    settings,
+    'CMSMETATAGS_TW_IMAGE_DEFAULT_PATH',
     ''
 )
 

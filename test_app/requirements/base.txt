@@ -1,0 +1,9 @@
+Django>=3.2,<3.3
+django-cms>=3.8,<3.9
+django-compressor
+django-filer
+django-treebeard==4.4
+autopep8
+easy-thumbnails==2.7.1
+flake8
+psycopg2

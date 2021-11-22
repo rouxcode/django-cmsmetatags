@@ -36,6 +36,10 @@ class CMSMetaTagsPlugin(CMSPluginBase):
                 context.get('request'),
                 instance,
             ),
+            'tw_image_url': self.get_tw_image_url(
+                context.get('request'),
+                instance,
+            ),
         })
         return context
 
@@ -46,6 +50,18 @@ class CMSMetaTagsPlugin(CMSPluginBase):
             path = img.url
         elif conf.FB_IMAGE_DEFAULT_PATH:
             path = conf.FB_IMAGE_DEFAULT_PATH
+        if path:
+            site = Site.objects.get_current(request=request)
+            return '{}://{}{}'.format(conf.PROTOCOL, site.domain, path)
+        return ''
+
+    def get_tw_image_url(self, request, obj):
+        path = None
+        img = obj.get_tw_image()
+        if img:
+            path = img.url
+        elif conf.TW_IMAGE_DEFAULT_PATH:
+            path = conf.TW_IMAGE_DEFAULT_PATH
         if path:
             site = Site.objects.get_current(request=request)
             return '{}://{}{}'.format(conf.PROTOCOL, site.domain, path)
