@@ -26,7 +26,7 @@ CLASSIFIERS = [
 
 setup(
     name='django-cmsmetatags',
-    version='0.0.5',
+    version='0.4.2a',
     author='Alaric Mägerle',
     author_email='info@rouxcode.ch',
     description=DESCRIPTION,
@@ -37,7 +37,7 @@ setup(
     platforms=['OS Independent'],
     classifiers=CLASSIFIERS,
     install_requires=[
-        'django>=2.2'
+        'django>=3.2'
     ],
     packages=find_packages(exclude=['example', 'docs']),
     include_package_data=True,
